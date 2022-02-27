@@ -5,73 +5,164 @@
   box-sizing: border-box;
 }
 
+:root {
+  --dark-blue: #4d96a9;
+  --light-blue: #8fe3f9;
+  --dark-violet: #855fb1;
+  --light-violet: #d9b8ff;
+  --dark-grey: #28283d;
+  --light-grey: #87879d;
+  --white: #fafafa;
+}
 body {
   display: flex;
   flex-direction: column;
   font-family: "Red Hat Display", sans-serif;
   align-content: center;
   width: 100vw;
+  margin: 2rem;
 }
 .container-head {
   display: grid;
   grid-template-rows: 1fr 3fr;
-  grid-template-columns: repeat(3, 3fr);
+  grid-template-columns: 3fr 3.5fr 3fr;
   margin: 0 auto;
   margin-top: 1rem;
   width: 100vw;
+  margin-bottom: 1rem;
 }
 .site-logo {
   grid-column: 1/4;
   justify-self: center;
 }
 .photo-top-left {
-  justify-self: end;
+  justify-self: center;
 }
 .header-text,
 .content-text {
   text-align: center;
+  width: 35vw;
+  margin: 0 auto;
 }
 h1 {
+  color: #28283d;
+  font-size: 4.5rem;
   font-weight: 700;
 }
+h2.text-1 {
+  color: #28283d;
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
 p {
+  font-size: 1.2rem;
   color: grey;
 }
 
 .photo-top-right {
-  justify-self: start;
+  justify-self: center;
 }
-
+button {
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem 2rem 1rem;
+  margin: 1rem;
+  color: #fafafa;
+}
+.button-1 {
+  background-color: #4d96a9;
+}
+.button-1:hover {
+  cursor: pointer;
+  background-color: #8fe3f9;
+}
+.button-2,
+.button-3 {
+  background-color: #855fb1;
+}
+.button-2:hover,
+.button-3:hover {
+  cursor: pointer;
+  background-color: #d9b8ff;
+}
+#version-text-1 {
+  color: #47b4cf;
+}
+#version-text-3 {
+  color: #b173f7;
+}
 .line-number-decoration {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  margin-bottom: 4em;
+  margin-top: 5em;
 }
 .vertical-line {
   align-self: center;
   width: 1px;
-  background-color: blue;
-  height: 80px;
+  background-color: #87879d;
+  height: 90px;
 }
 .center-line-number {
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  border: 1px solid red;
+  height: 60px;
+  width: 60px;
+  border: 1px solid #87879d;
+  background-color: #fafafa;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  z-index: 2;
 }
 .four-cards {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 4em;
+  margin-bottom: 2em;
+}
+.icons {
+  width: 17em;
+  border-radius: 10px;
+}
+h3 {
+  color: #4d96a9;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 3em;
+  margin-bottom: 2em;
 }
 .footer {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   background-image: url("assets/desktop/image-footer.jpg");
+  background-size: cover;
+  background-color: #4d96a9;
   background-repeat: no-repeat;
-  height: 300px;
+  background-blend-mode: multiply;
+  opacity: 0.8;
+  height: 21em;
+  margin-top: -2em;
+  z-index: 1;
+}
+h2.text-2 {
+  font-size: 3rem;
+  color: #fafafa;
+  width: 30vw;
+  transform: translateX(-50px);
+}
+p.text-3 {
+  color: #fafafa;
+  width: 25vw;
+}
+.button-3 {
+  transform: translateX(100px);
 }
